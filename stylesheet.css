@@ -401,8 +401,8 @@ summary:focus-visible::before {
 }
 
 .more-publications-cell {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .more-publications-footer {
@@ -410,16 +410,32 @@ summary:focus-visible::before {
 }
 
 .more-publications-less {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 700;
   font-size: 15px;
   color: var(--link);
 }
 
 .more-publications-icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 10px;
-  transform: translateY(-1px);
-  margin-right: 4px;
+  width: 10px;
+  height: 10px;
+}
+
+.more-publications-icon::before {
+  content: "\25B2";
+  display: inline-block;
+  color: var(--link);
+  transform: rotate(90deg) translateY(1px);
+}
+
+.more-publications-icon-expanded::before {
+  transform: rotate(0deg) translateY(1px);
 }
 
 .more-publications-less:hover,
